@@ -19,6 +19,7 @@
     });
 
     if (location.hash === '#callback') {
+      location.hash = '';
       OAuth.callback('github')
         .done(function(res) {
           res.get('/user')
